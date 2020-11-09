@@ -1,8 +1,17 @@
 name: Main
 on: push
 jobs:
-  main:
+  macos:
     runs-on: macOS-latest
+    steps:
+    - uses: actions/setup-haskell@v1.1
+      with:
+        ghc-version: 8.6.5
+        cabal-version: 2.4
+    - run: cabal --version
+
+  debian:
+    runs-on: debian-latest
     steps:
     - uses: actions/setup-haskell@v1.1
       with:
