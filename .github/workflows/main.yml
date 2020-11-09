@@ -10,8 +10,8 @@ jobs:
         cabal-version: 2.4
     - run: cabal --version
 
-  debian:
-    runs-on: debian-latest
+  ubuntu:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/setup-haskell@v1.1
       with:
